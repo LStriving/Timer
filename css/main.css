@@ -84,6 +84,12 @@ button {
     background-color: #2980b9;
 }
 
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(30%);
+}
+
 .section-selector {
     margin: 20px 0;
     text-align: center;
@@ -172,4 +178,18 @@ th {
     margin: 10px 0;
     font-weight: bold;
     color: #27ae60;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* visual alert when time is up: make container background red and text white */
+.time-up {
+    background-color: #ffe6e6 !important;
+    box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.08) inset;
+}
+
+.time-up h1, .time-up .timer-display, .time-up .stat-card, .time-up .active-section {
+    color: #c0392b !important;
 }
