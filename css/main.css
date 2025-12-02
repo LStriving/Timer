@@ -1,0 +1,175 @@
+body {
+    font-family: 'Microsoft YaHei', Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.timer-display {
+    font-size: 48px;
+    text-align: center;
+    font-weight: bold;
+    color: #34495e;
+    margin: 20px 0;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    letter-spacing: 3px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.start-btn {
+    background-color: #27ae60;
+    color: white;
+}
+
+.start-btn:hover {
+    background-color: #219a52;
+}
+
+.pause-btn {
+    background-color: #f39c12;
+    color: white;
+}
+
+.pause-btn:hover {
+    background-color: #d68910;
+}
+
+.reset-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.reset-btn:hover {
+    background-color: #c0392b;
+}
+
+.stop-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.stop-btn:hover {
+    background-color: #2980b9;
+}
+
+.section-selector {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.section-selector select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin: 0 10px;
+}
+
+.time-input {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.time-input input {
+    width: 60px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.history {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.history h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.active-section {
+    background-color: #d5f4e6;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #27ae60;
+}

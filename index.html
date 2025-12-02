@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <!-- include css and js -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>公务员考试练习计时器</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/timer.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>公务员考试练习计时器</h1>
+
+      <div class="active-section" id="activeSection">当前题型: 未选择</div>
+
+      <div class="section-selector">
+        <label for="sectionType">选择题型: </label>
+        <select id="sectionType">
+          <option value="">请选择题型</option>
+          <option value="资料分析">资料分析</option>
+          <option value="逻辑">逻辑</option>
+          <option value="片段阅读">片段阅读</option>
+          <option value="数量关系">数量关系</option>
+          <option value="图推">图推</option>
+        </select>
+
+        <label for="presetTime">预设时间(分钟): </label>
+        <select id="presetTime">
+          <option value="0">自定义</option>
+          <option value="20">20分钟</option>
+          <option value="30">30分钟</option>
+          <option value="40">40分钟</option>
+          <option value="60">60分钟</option>
+        </select>
+      </div>
+
+      <div class="time-input" id="customTimeInput" style="display: none">
+        <label for="minutes">自定义时间(分钟): </label>
+        <input type="number" id="minutes" min="1" max="120" value="30" />
+      </div>
+
+      <div class="timer-display" id="display">00:00:00</div>
+
+      <div class="controls">
+        <button class="start-btn" id="startBtn">开始</button>
+        <button class="pause-btn" id="pauseBtn">暂停</button>
+        <button class="reset-btn" id="resetBtn">重置</button>
+        <button class="stop-btn" id="stopBtn">停止记录</button>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-value" id="totalSessions">0</div>
+          <div class="stat-label">总练习次数</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="avgTime">00:00</div>
+          <div class="stat-label">平均用时</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="bestTime">--:--</div>
+          <div class="stat-label">最佳用时</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="totalTime">00:00</div>
+          <div class="stat-label">累计用时</div>
+        </div>
+      </div>
+
+      <div class="history">
+        <h2>练习历史记录</h2>
+        <table id="historyTable">
+          <thead>
+            <tr>
+              <th>题型</th>
+              <th>用时</th>
+              <th>日期</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="historyBody">
+            <!-- 历史记录将在这里显示 -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
